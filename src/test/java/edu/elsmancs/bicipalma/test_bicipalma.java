@@ -1,8 +1,8 @@
 package edu.elsmancs.bicipalma;
 
 import estacion.Estacion;
-//import bicicleta.Bicicleta;
-//import tarjetaUsuario.TarjetaUsuario;
+import bicicleta.Bicicleta;
+import tarjetaUsuario.TarjetaUsuario;
 
 import static org.junit.Assert.*;
 
@@ -40,8 +40,8 @@ public class test_bicipalma {
 	
 	@Test
 	public void anclarBicicleta() {
-		Bicicleta bici = new Bicicletya(2);
-		estacion.anckarBicicleta(bici);
+		Bicicleta bici = new Bicicleta(2);
+		estacion.anclarBicicleta(bici);
 	}
 	
 	@Test

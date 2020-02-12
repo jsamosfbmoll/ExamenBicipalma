@@ -25,7 +25,7 @@ public class BiciPalma {
 		System.out.println("anclajesLibres: " + estacion.anclajesLibres());
 
 		/* caso TEST anclar bicicleta(s) */
-/*
+
 		System.out.println("\n **** caso TEST anclar bicicleta(s) **** \n");
 		
 		int[] bicicletas = {291, 292, 293, 294};
@@ -35,7 +35,7 @@ public class BiciPalma {
 			System.out.println( estacion.generarAnclaje());
 		}
 		*/
-/*
+
 		for ( int id: bicicletas ){
 			Bicicleta bicicleta = new Bicicleta(id);
 			estacion.anclarBicicleta(bicicleta);
