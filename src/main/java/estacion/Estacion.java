@@ -17,8 +17,18 @@ public class Estacion {
 	public void consultarEstacion() {
 		String text = "id: " + this.id
 				+ "\ndireccion: " + this.direccion
-				+ "\nnumeroAnclajes: " + Integer.toString(this.numAnclajes);
+				+ "\nnumeroAnclajes: " + this.numAnclajes;
 		System.out.println(text);
+	}
+	
+	public int anclajesLibres() {
+		int anclajesLibres = 0;
+		for (Integer anclaje : this.anclajes) {
+			if (anclaje == null) {
+				anclajesLibres += 1;
+			}
+		}
+		return anclajesLibres;
 	}
 
 }
