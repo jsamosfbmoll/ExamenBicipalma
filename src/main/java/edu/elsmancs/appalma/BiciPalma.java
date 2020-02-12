@@ -44,7 +44,7 @@ public class BiciPalma {
 		System.out.println("anclajesLibres tras generar "+ bicicletas.length + " bicis: " + estacion.anclajesLibres());
 		
 		/* caso TEST consultar bicicletas ancladas */
-/*
+
 		System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
 		
 		estacion.consultarAnclajes();

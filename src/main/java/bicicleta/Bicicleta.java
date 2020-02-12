@@ -8,7 +8,8 @@ public class Bicicleta {
 		this.id = id;
 	}
 	
-	public int getId() {
-		return this.id;
+	@Override
+	public String toString() {
+		return Integer.toString(this.id);
 	}
 }

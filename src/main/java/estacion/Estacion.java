@@ -34,17 +34,29 @@ public class Estacion {
 	}
 	
 	private void mostrarAnclaje(Bicicleta bicicleta, int numAnclaje) {
-		System.out.println("Bicicleta: " + bicicleta.getId() + " anclada en el anclaje: " + (numAnclaje + 1));
+		System.out.println("Bicicleta: " + bicicleta + " anclada en el anclaje: " + (numAnclaje + 1));
 	}
 	
 	public void anclarBicicleta(Bicicleta bicicleta) {
-		for (int i = 0; i < this.numAnclajes; i++) {
-			if (this.anclajes[i] == null) {
-				this.anclajes[i] = bicicleta;
-				this.mostrarAnclaje(bicicleta, i);
+		for (int posicionAnclaje = 0; posicionAnclaje < this.numAnclajes; posicionAnclaje++) {
+			if (this.anclajes[posicionAnclaje] == null) {
+				this.anclajes[posicionAnclaje] = bicicleta;
+				this.mostrarAnclaje(bicicleta, posicionAnclaje);
 				break;
 			}
 		}
+	}
+	
+	public void consultarAnclajes() {
+		String texto = "";
+		for (int i = 0; i < this.numAnclajes; i++) {
+			if (this.anclajes[i] == null) {
+				texto += "Anclaje " + (i + 1) + " libre\n";
+			} else {
+				texto += "Anclaje " + (i + 1) + " " + this.anclajes[i] + "\n";
+			}
+		}
+		System.out.println(texto);
 	}
 
 }
