@@ -42,18 +42,18 @@ public class Estacion {
 			if (this.anclajes[posicionAnclaje] == null) {
 				this.anclajes[posicionAnclaje] = bicicleta;
 				this.mostrarAnclaje(bicicleta, posicionAnclaje);
-				break;
+				break; //Este break es para que una vez añadida la bicicleta deje de buscar espacios vacios para volverla a añadir
 			}
 		}
 	}
 	
 	public void consultarAnclajes() {
 		String texto = "";
-		for (int i = 0; i < this.numAnclajes; i++) {
-			if (this.anclajes[i] == null) {
-				texto += "Anclaje " + (i + 1) + " libre\n";
+		for (int posicionAnclaje = 0; posicionAnclaje < this.numAnclajes; posicionAnclaje++) {
+			if (this.anclajes[posicionAnclaje] == null) {
+				texto += "Anclaje " + (posicionAnclaje + 1) + " libre\n";
 			} else {
-				texto += "Anclaje " + (i + 1) + " " + this.anclajes[i] + "\n";
+				texto += "Anclaje " + (posicionAnclaje + 1) + " " + this.anclajes[posicionAnclaje] + "\n";
 			}
 		}
 		System.out.println(texto);

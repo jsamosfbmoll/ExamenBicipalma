@@ -50,7 +50,7 @@ public class BiciPalma {
 		estacion.consultarAnclajes();
 		
 		/* caso TEST retirar bicicleta */
-/*
+
 		System.out.println("\n **** caso TEST retirar bicicleta **** \n");
 		
 		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
