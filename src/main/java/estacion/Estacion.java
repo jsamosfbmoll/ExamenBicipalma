@@ -1,6 +1,9 @@
 package estacion;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 import bicicleta.Bicicleta;
+import tarjetaUsuario.TarjetaUsuario;
 
 public class Estacion {
 	
@@ -57,6 +60,31 @@ public class Estacion {
 			}
 		}
 		System.out.println(texto);
+	}
+	
+	public boolean leerTarjetaUsuario(TarjetaUsuario tarjeta) {
+		return tarjeta.activada();
+	}
+	
+	private int generarAnclaje() {
+		return ThreadLocalRandom.current().nextInt(0, this.numAnclajes);
+	}
+	
+	private void mostrarBicicleta(Bicicleta bicicleta, int numAnclaje) {
+		String texto = "bicicleta retirada: " + bicicleta
+				+ " del anclaje: " + numAnclaje;
+		System.out.println(texto);
+	}
+	
+	public void retirarBicicleta(TarjetaUsuario tarjeta) {
+		if (tarjeta.activada() && this.anclajesLibres() > 0) {
+			int anclaje = this.generarAnclaje();
+			while (this.anclajes[anclaje] == null) {
+				anclaje = this.generarAnclaje();
+			}
+			this.mostrarBicicleta(this.anclajes[anclaje], anclaje);
+			this.anclajes[anclaje] = null;
+		}
 	}
 
 }
