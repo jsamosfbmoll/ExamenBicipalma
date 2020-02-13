@@ -60,8 +60,9 @@ public class test_bicipalma {
 		estacion.leerTarjetaUsuario(tarjetaUsuario);
 	}
 	
-	@Test
+	@Test(timeout = 1000)
 	public void retirarBicicleta() {
+		estacion.anclarBicicleta(new Bicicleta(342));
 		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
 		estacion.retirarBicicleta(tarjetaUsuario);
 	}

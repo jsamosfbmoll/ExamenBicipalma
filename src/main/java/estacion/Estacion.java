@@ -72,7 +72,7 @@ public class Estacion {
 	
 	private void mostrarBicicleta(Bicicleta bicicleta, int numAnclaje) {
 		String texto = "bicicleta retirada: " + bicicleta
-				+ " del anclaje: " + numAnclaje;
+				+ " del anclaje: " + (numAnclaje + 1);
 		System.out.println(texto);
 	}
 	
